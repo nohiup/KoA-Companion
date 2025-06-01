@@ -20,14 +20,26 @@ jobs:
         with: 
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm ci
+      - run: npm run build
 
-      - name: Build App
-        run: npm run build
-      
-      - name: Deploy to Github Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          publish-dir: ./dist
+      # Checkout or tạo branch gh-pages cục bộ
+      - name: Checkout gh-pages branch
+        run: |
+          git fetch origin gh-pages:gh-pages || git checkout --orphan gh-pages
+          git switch gh-pages
+          git rm -rf .  # Xoá sạch nội dung cũ
+
+      # Copy nội dung build sang thư mục root branch gh-pages
+      - name: Copy build files
+        run: |
+          cp -r ./dist/* ./
+
+      # Commit & push thay đổi
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Manual deploy via GitHub Actions [skip ci]" || echo "No changes to commit"
+          git push origin gh-pages --force
