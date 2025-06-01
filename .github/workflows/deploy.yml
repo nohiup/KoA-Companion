@@ -25,7 +25,7 @@ jobs:
 
       - name: Move dist to temp-dist
         run: |
-          mv dist temp-dist
+          mv dist ../temp-dist
 
       # Checkout or tạo branch gh-pages cục bộ
       - name: Checkout gh-pages branch
@@ -37,7 +37,7 @@ jobs:
       # Copy nội dung build sang thư mục root branch gh-pages
       - name: Copy build files
         run: |
-          cp -r ./temp-dist/* ./
+          cp -r ../temp-dist/* ./
 
       # Commit & push thay đổi
       # Commit.
