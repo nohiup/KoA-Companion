@@ -2,7 +2,6 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
 */
-import React from 'react';
 
 export function PlaceholderPage({ title }: { title: string }) {
   return (

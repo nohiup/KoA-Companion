@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
 */
-import React, { useEffect, useState, createContext, useContext, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 // --- Data Structures ---
 interface FacialTraitPreview {
   id: string;

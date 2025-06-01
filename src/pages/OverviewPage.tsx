@@ -2,7 +2,6 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
 */
-import React from 'react';
 import type { PageKey } from '../index'; // Adjust path as necessary
 import { SearchIcon, ListIcon, HammerIcon } from '../index'; // Adjust path as necessary
 

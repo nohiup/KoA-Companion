@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
 */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { SearchIcon } from '../index'; // Assuming SearchIcon is exported from index.tsx
 
 // --- SVG Icons for Filters ---

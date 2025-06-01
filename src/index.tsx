@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
 */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Import Page Components
@@ -10,7 +10,7 @@ import { OverviewPage } from './pages/OverviewPage';
 import { ClassesPage } from './pages/ClassesPage';
 import { EquipmentPage } from './pages/EquipmentPage';
 import { TraitsPage } from './pages/TraitsPage';
-import HousesList, { RacesPage } from './pages/RacesPage';
+import HousesList from './pages/RacesPage';
 
 // --- Page Keys ---
 export type PageKey = 'overview' | 'classes' | 'equipment' | 'traits' | 'races';
