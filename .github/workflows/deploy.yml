@@ -36,10 +36,12 @@ jobs:
           cp -r ./dist/* ./
 
       # Commit & push thay đổi
+      # Commit.
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Manual deploy via GitHub Actions [skip ci]" || echo "No changes to commit"
-          git push origin gh-pages --force
+          git push origin gh-pages --force 
+        
