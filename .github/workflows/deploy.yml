@@ -24,7 +24,7 @@ jobs:
       - run: npm run build
 
       - name: Move dist to temp-dist
-      - run: |
+        run: |
           mv dist temp-dist
 
       # Checkout or tạo branch gh-pages cục bộ
