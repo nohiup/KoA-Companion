@@ -40,7 +40,6 @@ jobs:
           cp -r ../temp-dist/* ./
 
       # Commit & push thay đổi
-      # Commit.
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
