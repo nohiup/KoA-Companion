@@ -108,7 +108,7 @@ type HouseTabKey = 'facialTraits' | 'quests' | 'fort' | 'resource';
 // ];
 
 //URL:
-const allHousesUrl = 'http://koa.australiaeast.cloudapp.azure.com:8080/races/all';
+const allHousesUrl = 'https://koa.australiaeast.cloudapp.azure.com/races/all';
 
 //Real api call data
 const HousesList: React.FC = () => {
