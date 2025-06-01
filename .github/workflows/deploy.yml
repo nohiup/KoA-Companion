@@ -23,6 +23,10 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: Move dist to temp-dist
+      - run: |
+          mv dist temp-dist
+
       # Checkout or tạo branch gh-pages cục bộ
       - name: Checkout gh-pages branch
         run: |
@@ -33,7 +37,7 @@ jobs:
       # Copy nội dung build sang thư mục root branch gh-pages
       - name: Copy build files
         run: |
-          cp -r ./dist/* ./
+          cp -r ./temp-dist/* ./
 
       # Commit & push thay đổi
       # Commit.
